@@ -8,11 +8,19 @@
 1. brain-even - игра где нужно ответить четное или не четное число. Что бы победить нужно ответить правильно 3 раза подряд.
 
 ## Установка
-` git clone git@github.com:Intactowow/brain-games.git `
+```
+  git clone git@github.com:Intactowow/brain-games.git
+```
 
-` cd brain-games `
+```
+  cd brain-games
+```
 
-` npm install `
+```
+  npm install
+```
 
 ## Запуск
-` make brain-even `
+```
+  make brain-even
+```
