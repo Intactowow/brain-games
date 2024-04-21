@@ -1,33 +1,25 @@
-import { getYourName } from '../cli.js';
-import readlineSync from 'readline-sync';
 import { random, isEven } from '../utils/utils.js';
+import { winGame, looseGame, print } from '../index.js';
 
-
-const userName = getYourName();
-
-export const brainEven = (gameAttempt = 3) => {
-  if (gameAttempt < 1) {
-    console.log(`Congratulations, ${userName}!`);
+export const brainEven = (userName, gameAttempt) => {
+  const isWinGame = winGame(userName, gameAttempt);
+  if (isWinGame) {
     return;
   }
 
   if (gameAttempt === 3) {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    print('Answer "yes" if the number is even, otherwise answer "no".');
   }
 
   const randomQuesValue = random();
-  console.log(`Question: ${randomQuesValue}`);
+  print(`Question: ${randomQuesValue}`);
 
-  const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
   const gameAnswer = isEven(randomQuesValue);
-
-  if (gameAnswer !== userAnswer) {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${gameAnswer}.`)
-    console.log(`Let's try again, ${userName}!`);
-
+  const isLooseGame = looseGame(userName, gameAnswer);
+  if (isLooseGame) {
     return;
   }
 
-  console.log('Correct!');
-  return brainEven(gameAttempt - 1);
+  print('Correct!');
+  return brainEven(userName, gameAttempt - 1);
 };
