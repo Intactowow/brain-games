@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { isPrime, random, print } from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
-export const brainPrime = (userName, gameAttempt) => {
+const brainPrime = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);
   if (isWinGame) {
     return;
@@ -25,3 +25,5 @@ export const brainPrime = (userName, gameAttempt) => {
   print('Correct!');
   return brainPrime(userName, gameAttempt - 1);
 };
+
+export default brainPrime;

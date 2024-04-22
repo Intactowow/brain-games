@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
-import { randomExpression, print, isNumber } from '../utils/utils.js';
+import { randomExpression, print, isNumber, calculateExpression } from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
-export const brainCalc = (userName, gameAttempt) => {
+const brainCalc = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);
   if (isWinGame) {
     return;
@@ -15,7 +15,7 @@ export const brainCalc = (userName, gameAttempt) => {
   const randomExpress = randomExpression();
   print(`Question: ${randomExpress}`);
 
-  const gameAnswer = eval(randomExpress);
+  const gameAnswer = calculateExpression(randomExpress);
   const userAnswer = isNumber(+readlineSync.question('Your answer: ').toLowerCase());
   const isLooseGame = looseGame(userName, gameAnswer, (+userAnswer || userAnswer));
   if (isLooseGame) {
@@ -25,3 +25,5 @@ export const brainCalc = (userName, gameAttempt) => {
   print('Correct!');
   return brainCalc(userName, gameAttempt - 1);
 };
+
+export default brainCalc;

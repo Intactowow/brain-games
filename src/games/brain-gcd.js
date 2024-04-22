@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { randomGcd, print, gcd } from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
-export const brainGcd = (userName, gameAttempt) => {
+const brainGcd = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);
   if (isWinGame) {
     return;
@@ -26,3 +26,5 @@ export const brainGcd = (userName, gameAttempt) => {
   print('Correct!');
   return brainGcd(userName, gameAttempt - 1);
 };
+
+export default brainGcd;

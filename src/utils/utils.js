@@ -72,6 +72,22 @@ const isNumber = (value) => {
   return typeof value === 'number' && !isNaN(value) ? value : false;
 }
 
+const calculateExpression = (expression) => {
+  const [number1, operator, number2] = expression.split(' ');
+  const num1 = parseFloat(number1);
+  const num2 = parseFloat(number2);
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error('Invalid operator');
+  }
+};
+
 export {
   random,
   randomExpression,
@@ -80,5 +96,6 @@ export {
   gcd,
   randomProgression,
   isPrime,
-  isNumber
+  isNumber,
+  calculateExpression
 }

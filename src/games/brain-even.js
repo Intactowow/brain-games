@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { random, isEven, print } from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
-export const brainEven = (userName, gameAttempt) => {
+const brainEven = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);
   if (isWinGame) {
     return;
@@ -25,3 +25,5 @@ export const brainEven = (userName, gameAttempt) => {
   print('Correct!');
   return brainEven(userName, gameAttempt - 1);
 };
+
+export default brainEven;

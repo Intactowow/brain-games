@@ -1,4 +1,4 @@
-import { getYourName } from './cli.js';
+import getYourName from './cli.js';
 
 const gameAttempt = 3;
 const userName = getYourName();
