@@ -12,7 +12,7 @@ const random = () => {
 const isEven = (num) => {
   if (num % 2 === 0) {
     return 'yes';
-  };
+  }
 
   return 'no';
 }
@@ -44,16 +44,16 @@ const gcd = (a, b) => {
 
 const randomProgression = () => {
   const length = Math.floor(Math.random() * 6) + 5;
-    const step = Math.floor(Math.random() * 10) + 1;
-    const start = Math.floor(Math.random() * 10);
-    const progression = [];
-    let hiddenIndex = Math.floor(Math.random() * length);
-    for (let i = 0; i < length; i++) {
-      progression.push(start + step * i);
-    }
-    const hiddenNumber = progression[hiddenIndex];
-    progression[hiddenIndex] = "..";
-    return { progression: progression.join(" "), answer: hiddenNumber };
+  const step = Math.floor(Math.random() * 10) + 1;
+  const start = Math.floor(Math.random() * 10);
+  const progression = [];
+  let hiddenIndex = Math.floor(Math.random() * length);
+  for (let i = 0; i < length; i++) {
+    progression.push(start + step * i);
+  }
+  const hiddenNumber = progression[hiddenIndex];
+  progression[hiddenIndex] = "..";
+  return { progression: progression.join(" "), answer: hiddenNumber };
 }
 
 const isPrime = (number) => {
