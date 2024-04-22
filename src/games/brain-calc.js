@@ -24,7 +24,7 @@ const brainCalc = (userName, gameAttempt) => {
   const userAnswer = isNumber(+readlineSync.question('Your answer: ').toLowerCase());
   const isLooseGame = looseGame(userName, gameAnswer, (+userAnswer || userAnswer));
   if (isLooseGame) {
-    return false;
+    return;
   }
 
   print('Correct!');
