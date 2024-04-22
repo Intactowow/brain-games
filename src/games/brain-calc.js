@@ -1,5 +1,10 @@
 import readlineSync from 'readline-sync';
-import { randomExpression, print, isNumber, calculateExpression } from '../utils/utils.js';
+import {
+  randomExpression,
+  print,
+  isNumber,
+  calculateExpression
+} from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
 const brainCalc = (userName, gameAttempt) => {
@@ -19,7 +24,7 @@ const brainCalc = (userName, gameAttempt) => {
   const userAnswer = isNumber(+readlineSync.question('Your answer: ').toLowerCase());
   const isLooseGame = looseGame(userName, gameAnswer, (+userAnswer || userAnswer));
   if (isLooseGame) {
-    return;
+    return false;
   }
 
   print('Correct!');
