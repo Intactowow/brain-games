@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randomProgression, print, gcd } from '../utils/utils.js';
+import { randomProgression, print } from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
 export const brainProgression = (userName, gameAttempt) => {
