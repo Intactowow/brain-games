@@ -29,11 +29,11 @@ const randomGcd = () => {
   return `${firstRandomNum} ${secondRandomNum}`;
 };
 
-const gcd = (a, b) => {
-  while (b !== 0) {
-    const temp = b;
-    b = a % b;
-    a = temp;
+const gcd = (num1, num2) => {
+  while (num2 !== 0) {
+    const temp = num2;
+    const b = num1 % num2;
+    const a = temp;
   }
   return a;
 };
@@ -64,7 +64,7 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const isNumber = (value) => typeof value === 'number' && !Number.isNaN(value) ? value : false;
+const isNumber = value => (typeof value === 'number' && !Number.isNaN(value) ? value : false);
 
 const calculateExpression = (expression) => {
   const [number1, operator, number2] = expression.split(' ');

@@ -5,7 +5,10 @@ import {
   isNumber,
   calculateExpression,
 } from '../utils/utils.js';
-import { winGame, looseGame } from '../index.js';
+import {
+  winGame,
+  looseGame,
+} from '../index.js';
 
 const brainCalc = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);
