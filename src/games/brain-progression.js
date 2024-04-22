@@ -17,7 +17,7 @@ const brainProgression = (userName, gameAttempt) => {
 
   const gameAnswer = randomProgressionQues.answer;
   const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
-  const isLooseGame = looseGame(userName, gameAnswer, (+userAnswer || userAnswer));
+  const isLooseGame = looseGame(userName, gameAnswer, userAnswer);
   if (isLooseGame) {
     return;
   }

@@ -53,7 +53,7 @@ const randomProgression = () => {
   }
   const hiddenNumber = progression[hiddenIndex];
   progression[hiddenIndex] = "..";
-  return { progression: progression.join(" "), answer: hiddenNumber };
+  return { progression: progression.join(" "), answer: String(hiddenNumber)};
 }
 
 const isPrime = (number) => {
