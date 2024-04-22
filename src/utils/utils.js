@@ -1,13 +1,9 @@
 const MAX_RANDOM = 100;
 const OPERATION = ['+', '-', '*'];
 
-export const print = (text) => {
-  console.log(text);
-};
+export const print = (text) => console.log(text);
 
-const random = () => {
-  return Math.floor(Math.random() * MAX_RANDOM);
-};
+const random = () => Math.floor(Math.random() * MAX_RANDOM);
 
 const isEven = (num) => {
   if (num % 2 === 0) {
@@ -47,20 +43,20 @@ const randomProgression = () => {
   const step = Math.floor(Math.random() * 10) + 1;
   const start = Math.floor(Math.random() * 10);
   const progression = [];
-  let hiddenIndex = Math.floor(Math.random() * length);
-  for (let i = 0; i < length; i++) {
+  const hiddenIndex = Math.floor(Math.random() * length);
+  for (let i = 0; i < length; i += 1) {
     progression.push(start + step * i);
   }
   const hiddenNumber = progression[hiddenIndex];
-  progression[hiddenIndex] = "..";
-  return { progression: progression.join(" "), answer: String(hiddenNumber)};
+  progression[hiddenIndex] = '..';
+  return { progression: progression.join(' '), answer: String(hiddenNumber) };
 };
 
 const isPrime = (number) => {
   if (number <= 1) {
     return 'no';
   }
-  for (let i = 2; i <= Math.sqrt(number); i++) {
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) {
       return 'no';
     }
@@ -68,9 +64,7 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const isNumber = (value) => {
-  return typeof value === 'number' && !isNaN(value) ? value : false;
-};
+const isNumber = (value) => typeof value === 'number' && !Number.isNaN(value) ? value : false;
 
 const calculateExpression = (expression) => {
   const [number1, operator, number2] = expression.split(' ');
