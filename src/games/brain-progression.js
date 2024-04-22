@@ -9,11 +9,10 @@ export const brainProgression = (userName, gameAttempt) => {
   }
 
   if (gameAttempt === 3) {
-    print('Find the greatest common divisor of given numbers.');
+    print('What is the result of the expression?');
   }
 
   const randomProgressionQues = randomProgression();
-  print('What number is missing in the progression?');
   print(`Question: ${randomProgressionQues.progression}`);
 
   const gameAnswer = randomProgressionQues.answer;

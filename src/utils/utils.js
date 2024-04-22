@@ -68,6 +68,10 @@ const isPrime = (number) => {
   return 'yes';
 }
 
+const isNumber = (value) => {
+  return typeof value === 'number' && !isNaN(value) ? value : false;
+}
+
 export {
   random,
   randomExpression,
@@ -75,5 +79,6 @@ export {
   randomGcd,
   gcd,
   randomProgression,
-  isPrime
+  isPrime,
+  isNumber
 }
