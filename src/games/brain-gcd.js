@@ -1,6 +1,13 @@
 import readlineSync from 'readline-sync';
-import { randomGcd, print, gcd } from '../utils/utils.js';
-import { winGame, looseGame } from '../index.js';
+import {
+  randomGcd,
+  print,
+  gcd,
+} from '../utils/utils.js';
+import {
+  winGame,
+  looseGame,
+} from '../index.js';
 
 const brainGcd = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);

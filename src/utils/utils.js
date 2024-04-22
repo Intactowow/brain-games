@@ -30,12 +30,15 @@ const randomGcd = () => {
 };
 
 const gcd = (num1, num2) => {
-  while (num2 !== 0) {
-    const temp = num2;
-    const b = num1 % num2;
-    const a = temp;
+  let numFirst = num1;
+  let numSecond = num2;
+
+  while (numSecond !== 0) {
+    const temp = numSecond;
+        numSecond = numFirst % numSecond;
+        numFirst = temp;
   }
-  return a;
+  return numFirst;
 };
 
 const randomProgression = () => {
