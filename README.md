@@ -23,5 +23,5 @@
 
 ## Запуск
 ```
-  make ${game-name}
+  make game-name
 ```
