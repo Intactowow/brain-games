@@ -1,5 +1,6 @@
-import { random, isEven } from '../utils/utils.js';
-import { winGame, looseGame, print } from '../index.js';
+import readlineSync from 'readline-sync';
+import { random, isEven, print } from '../utils/utils.js';
+import { winGame, looseGame } from '../index.js';
 
 export const brainEven = (userName, gameAttempt) => {
   const isWinGame = winGame(userName, gameAttempt);
@@ -15,7 +16,8 @@ export const brainEven = (userName, gameAttempt) => {
   print(`Question: ${randomQuesValue}`);
 
   const gameAnswer = isEven(randomQuesValue);
-  const isLooseGame = looseGame(userName, gameAnswer);
+  const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
+  const isLooseGame = looseGame(userName, gameAnswer, userAnswer);
   if (isLooseGame) {
     return;
   }

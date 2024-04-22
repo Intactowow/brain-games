@@ -1,9 +1,15 @@
 const MAX_RANDOM = 100;
-function random() {
+const OPERATION = ['+', '-', '*'];
+
+export const print = (text) => {
+  console.log(text);
+}
+
+const random = () => {
   return Math.floor(Math.random() * MAX_RANDOM);
 }
 
-function isEven(num) {
+const isEven = (num) => {
   if (num % 2 === 0) {
     return 'yes';
   };
@@ -11,7 +17,17 @@ function isEven(num) {
   return 'no';
 }
 
+const randomExpression = () => {
+  const randomIndexOperation = Math.floor(Math.random() * (OPERATION.length - 1));
+  const resultOperation = OPERATION[randomIndexOperation];
+  const firstRandomNum = random();
+  const secondRandomNum = random();
+
+  return `${firstRandomNum} ${resultOperation} ${secondRandomNum}`;
+}
+
 export {
   random,
+  randomExpression,
   isEven
 }
