@@ -9,6 +9,8 @@ const winGame = (nameUser, attemptGame) => {
     print(`Congratulations, ${nameUser}!`);
     return true;
   }
+
+  return false;
 };
 
 const looseGame = (nameUser, gameAnswer, userAnswer) => {
@@ -18,6 +20,8 @@ const looseGame = (nameUser, gameAnswer, userAnswer) => {
 
     return true;
   }
+
+  return false;
 };
 
 export {
