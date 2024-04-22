@@ -31,7 +31,7 @@ const randomGcd = () => {
 
 const gcd = (a, b) => {
   while (b !== 0) {
-    let temp = b;
+    const temp = b;
     b = a % b;
     a = temp;
   }
@@ -92,4 +92,4 @@ export {
   isPrime,
   isNumber,
   calculateExpression,
-}
+};
