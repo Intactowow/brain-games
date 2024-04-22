@@ -9,7 +9,7 @@ export const brainProgression = (userName, gameAttempt) => {
   }
 
   if (gameAttempt === 3) {
-    print('What is the result of the expression?');
+    print('What number is missing in the progression?');
   }
 
   const randomProgressionQues = randomProgression();
