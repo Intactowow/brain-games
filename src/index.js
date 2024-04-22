@@ -13,7 +13,7 @@ const winGame = (userName, gameAttempt) => {
 
 const looseGame = (userName, gameAnswer, userAnswer) => {
   if (gameAnswer !== userAnswer) {
-    print(`${userAnswer} is wrong answer ;(. Correct answer was ${gameAnswer}.`)
+    print(`${userAnswer} is wrong answer ;(. Correct answer was ${gameAnswer}.`);
     print(`Let's try again, ${userName}!`);
 
     return true;
@@ -24,5 +24,5 @@ export {
   gameAttempt,
   userName,
   winGame,
-  looseGame
-}
+  looseGame,
+};

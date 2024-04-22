@@ -15,7 +15,7 @@ const brainGcd = (userName, gameAttempt) => {
   const randomGcdQues = randomGcd();
   print(`Question: ${randomGcdQues}`);
 
-  const numbersArray = randomGcdQues.split(" ").map(Number);
+  const numbersArray = randomGcdQues.split(' ').map(Number);
   const gameAnswer = gcd(numbersArray[0], numbersArray[1]);
   const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
   const isLooseGame = looseGame(userName, gameAnswer, (+userAnswer || userAnswer));

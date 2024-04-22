@@ -3,7 +3,7 @@ import {
   randomExpression,
   print,
   isNumber,
-  calculateExpression
+  calculateExpression,
 } from '../utils/utils.js';
 import { winGame, looseGame } from '../index.js';
 
