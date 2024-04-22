@@ -13,6 +13,7 @@ export const brainProgression = (userName, gameAttempt) => {
   }
 
   const randomProgressionQues = randomProgression();
+  print('What number is missing in the progression?');
   print(`Question: ${randomProgressionQues.progression}`);
 
   const gameAnswer = randomProgressionQues.answer;
