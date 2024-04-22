@@ -26,8 +26,26 @@ const randomExpression = () => {
   return `${firstRandomNum} ${resultOperation} ${secondRandomNum}`;
 }
 
+const randomGcd = () => {
+  const firstRandomNum = random();
+  const secondRandomNum = random();
+
+  return `${firstRandomNum} ${secondRandomNum}`;
+}
+
+const gcd = (a, b) => {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
 export {
   random,
   randomExpression,
-  isEven
+  isEven,
+  randomGcd,
+  gcd
 }
