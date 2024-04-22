@@ -1,12 +1,9 @@
 import readlineSync from 'readline-sync';
 import * as utils from '../utils/utils.js';
-import {
-  winGame,
-  looseGame,
-} from '../index.js';
+import * as index from '../index.js';
 
 const brainCalc = (userName, gameAttempt) => {
-  const isWinGame = winGame(userName, gameAttempt);
+  const isWinGame = index.winGame(userName, gameAttempt);
   if (isWinGame) {
     return;
   }
@@ -20,7 +17,7 @@ const brainCalc = (userName, gameAttempt) => {
 
   const gameAnswer = utils.calculateExpression(randomExpress);
   const userAnswer = utils.isNumber(+readlineSync.question('Your answer: ').toLowerCase());
-  const isLooseGame = looseGame(userName, gameAnswer, (+userAnswer || userAnswer));
+  const isLooseGame = index.looseGame(userName, gameAnswer, (+userAnswer || userAnswer));
   if (isLooseGame) {
     return;
   }
