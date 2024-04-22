@@ -31,7 +31,7 @@ const brainGcd = (userName, gameAttempt) => {
   }
 
   print('Correct!');
-  return brainGcd(userName, gameAttempt - 1);
+  brainGcd(userName, gameAttempt - 1);
 };
 
 export default brainGcd;

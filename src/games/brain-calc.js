@@ -31,7 +31,7 @@ const brainCalc = (userName, gameAttempt) => {
   }
 
   print('Correct!');
-  return brainCalc(userName, gameAttempt - 1);
+  brainCalc(userName, gameAttempt - 1);
 };
 
 export default brainCalc;

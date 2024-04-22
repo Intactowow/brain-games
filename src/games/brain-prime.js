@@ -23,7 +23,7 @@ const brainPrime = (userName, gameAttempt) => {
   }
 
   print('Correct!');
-  return brainPrime(userName, gameAttempt - 1);
+  brainPrime(userName, gameAttempt - 1);
 };
 
 export default brainPrime;

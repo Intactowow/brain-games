@@ -23,7 +23,7 @@ const brainEven = (userName, gameAttempt) => {
   }
 
   print('Correct!');
-  return brainEven(userName, gameAttempt - 1);
+  brainEven(userName, gameAttempt - 1);
 };
 
 export default brainEven;

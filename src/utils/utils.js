@@ -35,8 +35,8 @@ const gcd = (num1, num2) => {
 
   while (numSecond !== 0) {
     const temp = numSecond;
-        numSecond = numFirst % numSecond;
-        numFirst = temp;
+    numSecond = numFirst % numSecond;
+    numFirst = temp;
   }
   return numFirst;
 };
@@ -67,7 +67,7 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const isNumber = value => (typeof value === 'number' && !Number.isNaN(value) ? value : false);
+const isNumber = (value) => (typeof value === 'number' && !Number.isNaN(value) ? value : false);
 
 const calculateExpression = (expression) => {
   const [number1, operator, number2] = expression.split(' ');

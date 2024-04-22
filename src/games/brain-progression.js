@@ -23,7 +23,7 @@ const brainProgression = (userName, gameAttempt) => {
   }
 
   print('Correct!');
-  return brainProgression(userName, gameAttempt - 1);
+  brainProgression(userName, gameAttempt - 1);
 };
 
 export default brainProgression;
